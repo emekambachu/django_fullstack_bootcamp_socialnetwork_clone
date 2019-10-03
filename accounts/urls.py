@@ -7,6 +7,7 @@ app_name = 'accounts'
 urlpatterns = [
 
     # use the django login view and add the template you would be using for it
+
     path('login/',
          auth_views.LoginView.as_view(template_name='accounts/login.html'),
          name='login'),
