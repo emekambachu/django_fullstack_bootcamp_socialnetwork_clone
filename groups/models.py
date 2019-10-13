@@ -1,5 +1,8 @@
 from django.db import models
 
+# for reverse and redirection
+from django.urls import reverse
+
 # for url slugs and pretty urls
 from django.utils.text import slugify
 
@@ -32,7 +35,15 @@ class Group(models.Model):
         return self.name
 
     def save(self, *args, **kwargs):
-        self.slug = slugify()
+        self.slug = slugify(self.name)
+        self.description_html = misaka.html(self.description)
+        super().save(*args, **kwargs)
+
+    def get_absolute_url(self):
+        return reverse('groups:single', kwargs={'slug': self.slug})
+
+    class Meta:
+        ordering = {'name'}
 
 
 class GroupMember(models.Model):
