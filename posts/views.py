@@ -22,6 +22,7 @@ from . import forms
 
 # get logged in user details for this view
 from django.contrib.auth import get_user_model
+
 User = get_user_model()
 
 

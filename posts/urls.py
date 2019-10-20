@@ -18,11 +18,7 @@ urlpatterns = [
          views.UserPosts.as_view(),
          name='for_user'),
 
-    # path('by/<str:username>/<int:pk>/',
-    #      views.PostDetail.as_view(),
-    #      name='single'),
-
-    path('by/<int:pk>/',
+    path('by/<str:username>/<int:pk>/',
          views.PostDetail.as_view(),
          name='single'),
 
