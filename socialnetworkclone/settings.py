@@ -134,3 +134,6 @@ STATICFILES_DIRS = (
 # login and logout redirect
 LOGIN_REDIRECT_URL = 'test'
 LOGOUT_REDIRECT_URL = 'thanks'
+
+# custome user authentication
+# AUTH_USER_MODEL = 'accounts.User'
