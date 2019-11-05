@@ -14,7 +14,7 @@ from django.views import generic
 # import for http 404
 from django.http import Http404
 
-# run pip install braces first
+# run pip install django-braces first
 from braces.views import SelectRelatedMixin
 
 from . import models
