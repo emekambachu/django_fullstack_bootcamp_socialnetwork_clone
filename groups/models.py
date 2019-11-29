@@ -18,11 +18,11 @@ from django import template
 
 User = get_user_model()
 
+# use for connecting related name
 register = template.Library()
 
 # Groups app
 # Create your models here.
-
 
 class Group(models.Model):
     name = models.CharField(max_length=255, unique=True)
